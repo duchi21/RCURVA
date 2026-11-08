@@ -1,0 +1,42 @@
+Package: RCURVA
+Type: Package
+Title: Random Number Generation and Goodness-of-Fit Tests for the Curva Distribution
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Estalyn", "Duchi",
+      email = "estalyn.duchi@espoch.edu.ec",
+      role = c("aut", "cre")
+      ),
+    person(
+      "Nayelie Vanessa", "Alcoser Tenesaca",
+      email = "nayelie.alcoser@espoch.edu.ec",
+      role = "aut"
+    ),
+    person(
+      "José Ricardo", "Villavicencio Barreno",
+      email = "jose.villavicencio@espoch.edu.ec",
+      role = "aut"
+    ),
+    person(
+      "Keyla Brigitte", "Vilema Condo",
+      email = "keyla.vilema@espoch.edu.ec",
+      role = "aut"
+    ),
+    person(
+      "Mabel Paola", "Anguisaca Guanoluisa",
+      email = "mabel.anguisaca@espoch.edu.ec",
+      role = "aut"
+    )
+  )
+Description: This package contains functions for generating pseudorandom
+    numbers from the Curva probability distribution. It includes functions
+    to calculate the probability density function, cumulative distribution
+    function, quantiles and random samples. It also provides a Chi-square
+    goodness-of-fit test to determine whether a sample follows the
+    theoretical Curva distribution.
+Imports: stats
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Config/roxygen2/version: 8.1.1
