@@ -1,6 +1,6 @@
 Package: RCURVA
 Type: Package
-Title: Random Number Generation and Goodness-of-Fit Tests for the Curva Distribution
+Title: Random Number Generation and Goodness-of-Fit Tests for the Curve Distribution
 Version: 0.1.0
 Authors@R: c(
     person(
@@ -30,11 +30,11 @@ Authors@R: c(
     )
   )
 Description: This package contains functions for generating pseudorandom
-    numbers from the Curva probability distribution. It includes functions
+    numbers from the Curve probability distribution. It includes functions
     to calculate the probability density function, cumulative distribution
     function, quantiles and random samples. It also provides a Chi-square
     goodness-of-fit test to determine whether a sample follows the
-    theoretical Curva distribution.
+    theoretical Curve distribution.
 Imports: stats
 License: GPL-3
 Encoding: UTF-8
