@@ -3,11 +3,54 @@
 #' Performs a Chi-square goodness-of-fit test to determine
 #' whether a sample follows the Curve distribution.
 #'
-#' @param x Numeric vector containing the sample.
-#' @param k Number of intervals.
+#' @details
+#' The test divides the support of the Curve distribution into
+#' \eqn{k} equiprobable intervals. Under the null hypothesis,
+#' each interval has the same theoretical probability:
 #'
-#' @return A list containing the Chi-square statistic (chi),
-#' degrees of freedom (df) and p-value (pvalor).
+#' \deqn{\pi_i = \frac{1}{k}}
+#'
+#' The observed proportion in each interval is calculated as:
+#'
+#' \deqn{\hat{\pi}_i = \frac{O_i}{n}}
+#'
+#' where \eqn{O_i} is the observed frequency and \eqn{n}
+#' is the sample size.
+#'
+#' The expected frequency for each interval is:
+#'
+#' \deqn{E_i = n\pi_i = \frac{n}{k}}
+#'
+#' The Chi-square test statistic is:
+#'
+#' \deqn{\chi^2 = \sum_{i=1}^{k}
+#' \frac{(O_i-E_i)^2}{E_i}}
+#'
+#' The hypotheses of the test are:
+#'
+#' \deqn{H_0: \pi_i = \frac{1}{k}, \quad i=1,\ldots,k}
+#'
+#' \deqn{H_1: \exists i:\pi_i \neq \frac{1}{k}}
+#'
+#' Under the null hypothesis, the test statistic approximately
+#' follows a Chi-square distribution with \eqn{k-1} degrees
+#' of freedom, provided that no distribution parameters are
+#' estimated from the sample:
+#'
+#' \deqn{\chi^2 \sim \chi^2_{k-1}}
+#'
+#' The p-value is calculated using the upper tail of the
+#' Chi-square distribution.
+#'
+#' @param x Numeric vector containing the sample observations.
+#' @param k Number of equiprobable intervals. Defaults to 5.
+#'
+#' @return A list containing:
+#' \describe{
+#'   \item{chi}{Calculated Chi-square test statistic.}
+#'   \item{df}{Degrees of freedom, equal to \eqn{k-1}.}
+#'   \item{pvalor}{P-value of the goodness-of-fit test.}
+#' }
 #'
 #' @examples
 #' x <- rcurve(100)
